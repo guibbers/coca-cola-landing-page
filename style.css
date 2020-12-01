@@ -198,6 +198,7 @@ header .navigation li a:hover {
     
     .sci {
        left: 40px;
+       bottom: -50px;
     }
 
     .content {
@@ -221,6 +222,7 @@ header .navigation li a:hover {
        position: relative;
        width: 30px;
        height: 30px;
+       right: -130px;
        background: url(assets/menu.png) no-repeat;
        background-size: 30px;
        background-position: center;
@@ -231,7 +233,9 @@ header .navigation li a:hover {
     .toggle.active {
       background: url(assets/close.png) no-repeat;
       background-size: 25px;
+      right: 40px;
       background-position: center;
+      position: fixed;
     }
 
     header .navigation.active {
@@ -242,5 +246,23 @@ header .navigation li a:hover {
       width: 100%;
       height: 100%;
       background: #e51e2a;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+   
+    header .navigation.active li a {
+       margin: 10px 0;
+       font-size: 1.5em;
+       font-weight: 300;
+    }
+
+    header .navigation.active a:hover {
+       transform: translateX(10px);
+    }
+
+    ul .sci li a {
+       bottom: 0;
     }
  }
